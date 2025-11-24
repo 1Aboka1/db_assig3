@@ -1,0 +1,8 @@
+<h1>Job Application Detail</h1>
+<p>Caregiver: {{ object.caregiver_user.caregiver_user.given_name }} {{ object.caregiver_user.caregiver_user.surname }}</p>
+<p>Job ID: {{ object.job.job_id }}</p>
+<p>Date Applied: {{ object.date_applied }}</p>
+
+<a href="{% url 'jobapplication_edit' object.pk %}">Edit</a>
+<a href="{% url 'jobapplication_delete' object.pk %}">Delete</a>
+<a href="{% url 'jobapplication_list' %}">Back to list</a>

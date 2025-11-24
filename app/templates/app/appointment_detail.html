@@ -1,0 +1,12 @@
+<h1>Appointment Detail</h1>
+<p>ID: {{ object.appointment_id }}</p>
+<p>Caregiver: {{ object.caregiver_user.caregiver_user.given_name }} {{ object.caregiver_user.caregiver_user.surname }}</p>
+<p>Member: {{ object.member_user.member_user.given_name }} {{ object.member_user.member_user.surname }}</p>
+<p>Date: {{ object.appointment_date }}</p>
+<p>Time: {{ object.appointment_time }}</p>
+<p>Hours: {{ object.work_hours }}</p>
+<p>Status: {{ object.status }}</p>
+
+<a href="{% url 'appointment_edit' object.pk %}">Edit</a>
+<a href="{% url 'appointment_delete' object.pk %}">Delete</a>
+<a href="{% url 'appointment_list' %}">Back to list</a>

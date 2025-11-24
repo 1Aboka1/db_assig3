@@ -1,0 +1,13 @@
+<h1>Appointments</h1>
+<a href="{% url 'appointment_add' %}">Add Appointment</a>
+<ul>
+  {% for appt in object_list %}
+    <li>
+      <a href="{% url 'appointment_detail' appt.pk %}">{{ appt.caregiver_user.caregiver_user.given_name }} → {{ appt.member_user.member_user.given_name }} on {{ appt.appointment_date }}</a>
+      <a href="{% url 'appointment_edit' appt.pk %}">Edit</a>
+      <a href="{% url 'appointment_delete' appt.pk %}">Delete</a>
+    </li>
+  {% empty %}
+    <li>No appointments found.</li>
+  {% endfor %}
+</ul>

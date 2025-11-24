@@ -1,0 +1,12 @@
+<h1>User Detail</h1>
+<p>ID: {{ object.user_id }}</p>
+<p>Email: {{ object.email }}</p>
+<p>Name: {{ object.given_name }} {{ object.surname }}</p>
+<p>City: {{ object.city }}</p>
+<p>Phone: {{ object.phone_number }}</p>
+<p>Description: {{ object.profile_description }}</p>
+<p>Password: {{ object.password }}</p>
+
+<a href="{% url 'user_edit' object.pk %}">Edit</a>
+<a href="{% url 'user_delete' object.pk %}">Delete</a>
+<a href="{% url 'user_list' %}">Back to list</a>

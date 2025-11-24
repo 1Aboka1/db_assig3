@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My CRUD App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>My CRUD App</h1>
+        <nav>
+            <a href="{% url 'user_list' %}">Users</a> |
+            <a href="{% url 'caregiver_list' %}">Caregivers</a> |
+            <a href="{% url 'member_list' %}">Members</a> |
+            <a href="{% url 'address_list' %}">Addresses</a> |
+            <a href="{% url 'job_list' %}">Jobs</a> |
+            <a href="{% url 'jobapplication_list' %}">Applications</a> |
+            <a href="{% url 'appointment_list' %}">Appointments</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2025 My CRUD App</p>
+    </footer>
+</body>
+</html>

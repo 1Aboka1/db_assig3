@@ -1,0 +1,13 @@
+<h1>Job Applications</h1>
+<a href="{% url 'jobapplication_add' %}">Add Job Application</a>
+<ul>
+  {% for app in object_list %}
+    <li>
+      <a href="{% url 'jobapplication_detail' app.pk %}">{{ app.caregiver_user.caregiver_user.given_name }} → Job {{ app.job.job_id }}</a>
+      <a href="{% url 'jobapplication_edit' app.pk %}">Edit</a>
+      <a href="{% url 'jobapplication_delete' app.pk %}">Delete</a>
+    </li>
+  {% empty %}
+    <li>No applications found.</li>
+  {% endfor %}
+</ul>

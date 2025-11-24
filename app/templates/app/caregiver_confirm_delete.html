@@ -1,0 +1,7 @@
+<h1>Delete Caregiver</h1>
+<p>Are you sure you want to delete {{ object.caregiver_user.given_name }} {{ object.caregiver_user.surname }}?</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Yes, delete</button>
+</form>
+<a href="{% url 'caregiver_list' %}">Cancel</a>

@@ -1,0 +1,13 @@
+<h1>Addresses</h1>
+<a href="{% url 'address_add' %}">Add Address</a>
+<ul>
+  {% for addr in object_list %}
+    <li>
+      <a href="{% url 'address_detail' addr.pk %}">{{ addr.member_user.member_user.given_name }} {{ addr.member_user.member_user.surname }}</a>
+      <a href="{% url 'address_edit' addr.pk %}">Edit</a>
+      <a href="{% url 'address_delete' addr.pk %}">Delete</a>
+    </li>
+  {% empty %}
+    <li>No addresses found.</li>
+  {% endfor %}
+</ul>

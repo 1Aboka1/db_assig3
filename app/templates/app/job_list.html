@@ -1,0 +1,13 @@
+<h1>Jobs</h1>
+<a href="{% url 'job_add' %}">Add Job</a>
+<ul>
+  {% for job in object_list %}
+    <li>
+      <a href="{% url 'job_detail' job.pk %}">Job {{ job.job_id }} by {{ job.member_user.member_user.given_name }}</a>
+      <a href="{% url 'job_edit' job.pk %}">Edit</a>
+      <a href="{% url 'job_delete' job.pk %}">Delete</a>
+    </li>
+  {% empty %}
+    <li>No jobs found.</li>
+  {% endfor %}
+</ul>

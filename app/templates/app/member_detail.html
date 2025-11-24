@@ -1,0 +1,9 @@
+<h1>Member Detail</h1>
+<p>ID: {{ object.member_user.user_id }}</p>
+<p>Name: {{ object.member_user.given_name }} {{ object.member_user.surname }}</p>
+<p>House Rules: {{ object.house_rules }}</p>
+<p>Dependent Description: {{ object.dependent_description }}</p>
+
+<a href="{% url 'member_edit' object.pk %}">Edit</a>
+<a href="{% url 'member_delete' object.pk %}">Delete</a>
+<a href="{% url 'member_list' %}">Back to list</a>

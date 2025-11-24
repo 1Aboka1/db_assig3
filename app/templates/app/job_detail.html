@@ -1,0 +1,10 @@
+<h1>Job Detail</h1>
+<p>ID: {{ object.job_id }}</p>
+<p>Member: {{ object.member_user.member_user.given_name }} {{ object.member_user.member_user.surname }}</p>
+<p>Required Type: {{ object.required_caregiving_type }}</p>
+<p>Other Requirements: {{ object.other_requirements }}</p>
+<p>Date Posted: {{ object.date_posted }}</p>
+
+<a href="{% url 'job_edit' object.pk %}">Edit</a>
+<a href="{% url 'job_delete' object.pk %}">Delete</a>
+<a href="{% url 'job_list' %}">Back to list</a>

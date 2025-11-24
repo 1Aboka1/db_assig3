@@ -1,0 +1,13 @@
+<h1>Members</h1>
+<a href="{% url 'member_add' %}">Add Member</a>
+<ul>
+  {% for member in object_list %}
+    <li>
+      <a href="{% url 'member_detail' member.pk %}">{{ member.member_user.given_name }} {{ member.member_user.surname }}</a>
+      <a href="{% url 'member_edit' member.pk %}">Edit</a>
+      <a href="{% url 'member_delete' member.pk %}">Delete</a>
+    </li>
+  {% empty %}
+    <li>No members found.</li>
+  {% endfor %}
+</ul>

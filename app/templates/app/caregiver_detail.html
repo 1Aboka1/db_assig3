@@ -1,0 +1,11 @@
+<h1>Caregiver Detail</h1>
+<p>ID: {{ object.caregiver_user.user_id }}</p>
+<p>Name: {{ object.caregiver_user.given_name }} {{ object.caregiver_user.surname }}</p>
+<p>Photo: {{ object.photo }}</p>
+<p>Gender: {{ object.gender }}</p>
+<p>Type: {{ object.caregiving_type }}</p>
+<p>Hourly Rate: {{ object.hourly_rate }}</p>
+
+<a href="{% url 'caregiver_edit' object.pk %}">Edit</a>
+<a href="{% url 'caregiver_delete' object.pk %}">Delete</a>
+<a href="{% url 'caregiver_list' %}">Back to list</a>
