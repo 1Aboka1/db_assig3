@@ -27,6 +27,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['db-assig3.onrender.com', '127.0.0.1', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://db-assig3.onrender.com"
+]
 
 # Application definition
 
