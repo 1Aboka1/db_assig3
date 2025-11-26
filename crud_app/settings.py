@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -93,11 +93,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'my_db.sqlite',
     }
-}
-
-MIGRATION_MODULES = {
-    "app": None,
-    "crud_app": None,
 }
 
 # Password validation
